@@ -1,6 +1,12 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Components
+@{
     ViewData["Title"] = "Home Page";
     Layout = "_CustomLayout";
+
+    List<Pizza> pizze = new List<Pizza>();
+
+    pizze.Add(new Pizza("Margherita", "Pola di pomodoro, Fiordilatte, Origano, Basilico", "/img/pizza_margherita.png", 7.99m));
+    pizze.Add(new Pizza("Prosciutto e mozzarella", "Pola di pomodoro, Fiordilatte, Prosciutto", "/img/pizza_prosciutto.png", 9.99m));
 }
 
 <sectione class="main-page">
@@ -21,6 +27,24 @@
     <div class="main-page pizza_viewer mt-3">
         <div class="container">
             <div class="row justify-content-center">
+                @{
+                    foreach(Pizza pizza in pizze)
+                    {
+                        <div class="col-3">
+                           <div class="card" style="width: 18rem;">
+                                 <img src="@Url.Content(pizza.FotoUrl)" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">@pizza.Name</h5>
+                                    <p class="card-text">@pizza.Description</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">@pizza.Price euro</div>
+                                        <a href="#" class="btn btn-primary">Ordina</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
                 <div class="col-auto">
                 </div>
             </div>

@@ -20,3 +20,8 @@ body {
 .app {
     height: 100vh;
 }
+
+.price {
+    color: red;
+    font-weight: bold;
+}
