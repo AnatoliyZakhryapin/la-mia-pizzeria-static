@@ -14,5 +14,9 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+
+}
+
+.app {
+    height: 100vh;
 }

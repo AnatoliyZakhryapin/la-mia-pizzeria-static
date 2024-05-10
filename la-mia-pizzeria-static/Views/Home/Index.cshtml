@@ -1,8 +1,31 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = "_CustomLayout";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<sectione class="main-page">
+
+    @* Start title *@
+    <div class="main-page_title mt-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <h1>Casa della Pizza</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* Fine title *@
+
+    @* Start print pizze *@
+    <div class="main-page pizza_viewer mt-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+    @* Fine print pizze *@
+
+</sectione>
